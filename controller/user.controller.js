@@ -36,8 +36,10 @@ async function sendM(UserEmailId, Username) {
     transporter.sendMail(mailOptions, function (error) {
       if (error) {
         console.log(error);
+        return
       } else {
         console.log(`Email Has been Sent`);
+        return
       }
     });
   } catch (err) {
